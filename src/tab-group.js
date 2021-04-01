@@ -1,23 +1,21 @@
 import React from "react";
 
-function TabGroup() {
-    let state = false;
-
-    function handleSignupClick() {
-
+function TabGroup(props) {
+    function openLoginTab() {
+        props.changeTab('login');
     }
 
-    function handleLoginClick() {
-
+    function openSignupTab() {
+        props.changeTab('signup');
     }
 
     return (
         <ul className="tab-group">
-            <li className="tab active">
-                <a href="#signup" onClick={handleSignupClick}>Sign Up</a>
+            <li className="tab" className={(props.currentTab === 'signup') ? 'active' : ''} onClick={openSignupTab}>
+                <a href="#signup">Sign Up</a>
             </li>
-            <li className="tab">
-                <a href="#login" onClick={handleLoginClick}>Log In</a>
+            <li className="tab" className={(props.currentTab === 'login') ? 'active' : ''} onClick={openLoginTab}>
+                <a href="#login">Log In</a>
             </li>
         </ul>
     );

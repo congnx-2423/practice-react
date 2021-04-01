@@ -156,6 +156,7 @@ textarea {
     float:left;
     width:48%;
     margin-right:4%;
+    height: 45px;
     &:last-child { 
       margin:0;
     }
@@ -188,4 +189,17 @@ textarea {
 .forgot {
   margin-top:-20px;
   text-align:right;
+}
+
+#login > h1, #signup > h1 {
+  color: white;
+} 
+
+.field-wrap {
+  height: 45px;
+}
+
+input {
+  color: white !important;
+  font-size: 20px !important;
 }
